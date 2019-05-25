@@ -24,11 +24,13 @@ class ViewController: UIViewController {
 
     @IBAction func changeColorComponent(_ sender: AnyObject) {
 
-//        let r: CGFloat = self.redControl.isOn ? 1 : 0
-//        let g: CGFloat = self.greenControl.isOn ? 1 : 0
-//        let b: CGFloat = self.blueControl.isOn ? 1 : 0
-//
-//        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        let r: CGFloat = CGFloat(redSlider.value)
+        let g: CGFloat = CGFloat(greenSlider.value)
+        let b: CGFloat = CGFloat(blueSlider.value)
+
+        view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
     }
+
+
 }
 
