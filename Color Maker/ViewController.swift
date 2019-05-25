@@ -18,6 +18,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        redSlider.minimumTrackTintColor = .red
+        greenSlider.minimumTrackTintColor = .green
+        blueSlider.minimumTrackTintColor = .blue
+
         // Do any additional setup after loading the view.
         colorView.layer.borderWidth = 3
         colorView.layer.borderColor = UIColor.black.cgColor
