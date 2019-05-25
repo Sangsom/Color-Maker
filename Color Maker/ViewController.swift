@@ -14,10 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
-    
+    @IBOutlet var colorView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        colorView.layer.borderWidth = 3
+        colorView.layer.borderColor = UIColor.black.cgColor
+        colorView.layer.cornerRadius = 8
     }
 
     // MARK: Actions
@@ -28,7 +32,8 @@ class ViewController: UIViewController {
         let g: CGFloat = CGFloat(greenSlider.value)
         let b: CGFloat = CGFloat(blueSlider.value)
 
-        view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        
     }
 
 
