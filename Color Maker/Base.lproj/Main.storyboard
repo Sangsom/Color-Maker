@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-Bx-SEF">
-                                <rect key="frame" x="50" y="44" width="314" height="156"/>
+                                <rect key="frame" x="50" y="54" width="314" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="owv-hd-IyG">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -87,23 +87,27 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-mB-HLK" userLabel="Color View">
-                                <rect key="frame" x="82" y="353" width="250" height="200"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="OG5-fG-cV8"/>
-                                    <constraint firstAttribute="height" constant="200" id="mvf-LD-BVb"/>
-                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cef-NB-shA" userLabel="HexValue">
+                                <rect key="frame" x="207" y="260" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cef-NB-shA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AB9-HX-Xrk"/>
                             <constraint firstItem="YS5-Bx-SEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HRi-Dz-tdI"/>
+                            <constraint firstItem="cef-NB-shA" firstAttribute="top" secondItem="YS5-Bx-SEF" secondAttribute="bottom" constant="50" id="OSL-h4-Iij"/>
+                            <constraint firstItem="bbl-mB-HLK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="S8i-AJ-LLn"/>
+                            <constraint firstItem="bbl-mB-HLK" firstAttribute="top" secondItem="YS5-Bx-SEF" secondAttribute="bottom" constant="100" id="XoA-fV-TzV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YS5-Bx-SEF" secondAttribute="trailing" constant="50" id="hlh-Fw-hFs"/>
-                            <constraint firstItem="YS5-Bx-SEF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lLw-fs-AaD"/>
-                            <constraint firstItem="bbl-mB-HLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vJh-vO-Icd"/>
-                            <constraint firstItem="bbl-mB-HLK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wUh-75-hi7">
-                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
-                            </constraint>
+                            <constraint firstItem="YS5-Bx-SEF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="lLw-fs-AaD"/>
+                            <constraint firstItem="bbl-mB-HLK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mx3-5Y-rcz"/>
+                            <constraint firstItem="bbl-mB-HLK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u95-gj-PgX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -111,11 +115,13 @@
                         <outlet property="blueSlider" destination="x8Q-Gl-qnx" id="iGF-Or-iys"/>
                         <outlet property="colorView" destination="bbl-mB-HLK" id="sOr-N4-XfF"/>
                         <outlet property="greenSlider" destination="DdU-Ig-ula" id="vv7-WG-8K5"/>
+                        <outlet property="hexValueLabell" destination="cef-NB-shA" id="OPl-fB-tcS"/>
                         <outlet property="redSlider" destination="rbn-Gf-9Ij" id="WkB-FT-Sl6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
